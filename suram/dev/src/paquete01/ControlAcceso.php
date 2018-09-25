@@ -121,8 +121,11 @@ include($SYSpathraiz."config.php");
 	         if ($num>=1)
     	     {
     	     	$aux = $result->fetch_array();
-				   $_SESSION['usuario']                             = $aux['SYSusuario'];
-		   		   $_SESSION['usuario_id']                             = $aux['SYSusuario'];
+				   //$_SESSION['usuario']                             = $aux['SYSusuario'];
+		   		   //$_SESSION['usuario_id']                             = $aux['SYSusuario'];
+    	     	
+				   $_SESSION['usuario']                             = $aux[3];
+		   		   $_SESSION['usuario_id']                             = $aux[3];
 				   $_SESSION['usuario_nombre']                         = $aux['persona_nombre'];
 				   $_SESSION['usuario_estado']                         = $aux['SYSusuario_estado'];
 				   $SYSusuario_estado =   $aux['SYSusuario_estado'];

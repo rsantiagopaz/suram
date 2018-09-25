@@ -196,9 +196,9 @@
 		    // Función inicial > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > >
             //              ___________
             
-			public function fncInicio() : void
+		public function fncInicio() : void
 			//              ___________
-			 {
+		{
 			  // *********************************************************************************	
 			  // *********************************************************************************
 			  // C O N T R O L  D E  A C C E S O >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -219,13 +219,12 @@
 			  // C O N T R O L  D E  A C C E S O <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 			  // *********************************************************************************
 			  
-			  if (controlAcceso.getAutorizado==false)
-			   {
-			   	viewModulos.selectedChild=viewControlAcceso;
-			   	viewModulos.visible=true;
-			   	menuPrincipal.enabled=false;
-			   }	
-			 }
+			if (controlAcceso.getAutorizado==false) {
+				viewModulos.selectedChild=viewControlAcceso;
+				viewModulos.visible=true;
+				menuPrincipal.enabled=false;
+			}
+		}
 			// Fin funcion inicial < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < 
 			  
 			 
@@ -476,6 +475,7 @@
 		  	<![CDATA[
 		  	    lblCerrandoSesion.htmlText = "<i>Cerrando Sesión de <b>" + controlAcceso.getUsuario + "</b>...</i>";
 		  	    controlAcceso.logout();
+		  	    navigateToURL(new URLRequest(mx.managers.BrowserManager.getInstance().base), "_self");
 		  	]]>
 		  </mx:show>
 		  <mx:Label id="lblCerrandoSesion" htmlText="Cerrando Sesion..." fontSize="15" x="254.5" y="10">
